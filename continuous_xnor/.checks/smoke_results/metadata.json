@@ -1,0 +1,37 @@
+{
+  "dataset": "continuous_xnor",
+  "magnitude_distribution": "independent Uniform(0.5, 1.5)",
+  "normalization": "none",
+  "data_seeds": {
+    "train": 11,
+    "validation": 12,
+    "test": 13,
+    "conflicts": 14
+  },
+  "samples": {
+    "train": 1024,
+    "validation": 1024,
+    "test": 2048,
+    "balanced_conflicts": 2048
+  },
+  "model": "Linear(inputs, 32) -> ReLU -> Linear(32, 1)",
+  "optimizer": "full-batch SGD; no momentum, weight decay, or clipping",
+  "lr": 0.03,
+  "steps": 2,
+  "record_every": 25,
+  "seeds": [
+    42
+  ],
+  "alphas": [
+    1.0,
+    2.0
+  ],
+  "conditions": [
+    "ordinary",
+    "inverse_init",
+    "compensated_sgd"
+  ],
+  "baseline_alpha": 1.0,
+  "auxiliary_alpha1_reference_runs": 1,
+  "torch_version": "2.14.0+cu126"
+}
