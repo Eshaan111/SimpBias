@@ -1,0 +1,47 @@
+{
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "alphas": [
+    0.1,
+    0.5,
+    1.0,
+    2.0,
+    5.0,
+    10.0
+  ],
+  "steps": 500,
+  "lr": 0.03,
+  "quick": false,
+  "status": "complete",
+  "datasets": [
+    "C0_original",
+    "C1_zero",
+    "C2_noise"
+  ],
+  "conditions": [
+    "ordinary",
+    "inverse_init",
+    "compensated_sgd"
+  ],
+  "expected_runs": 270,
+  "torch_version": "2.14.1+cpu",
+  "data_seeds": {
+    "train": 11,
+    "validation": 12,
+    "test": 13,
+    "conflicts": 14
+  },
+  "samples": {
+    "train": 1024,
+    "validation": 1024,
+    "test": 2048,
+    "conflicts": 2048
+  },
+  "initial_tolerance": 1e-06,
+  "trajectory_tolerance": 0.0001
+}
