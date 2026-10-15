@@ -1,4 +1,4 @@
-"""Read-only mathematical and saved-result checks. Run from the project root."""
+"""Read-only mathematical and saved-result checks. Run from experiment_1 or invoke its path from the project root."""
 import ast
 import csv
 import itertools

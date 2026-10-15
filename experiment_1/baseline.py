@@ -134,7 +134,7 @@ def control_checks(xs, xc, y, alpha, seed, width, lr=0.01):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--output', default='results')
+    parser.add_argument('--output', default=Path(__file__).resolve().parent / 'results')
     parser.add_argument('--samples', type=int, default=2048)
     parser.add_argument('--width', type=int, default=32)
     parser.add_argument('--seeds', type=int, default=5)

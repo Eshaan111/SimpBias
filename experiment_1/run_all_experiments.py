@@ -1,6 +1,6 @@
 """Run the simplicity-bias experiments across seeds and feature scales.
 
-From the project root:
+From the experiment_1 folder:
     python run_all_experiments.py
     python run_all_experiments.py --seeds 42 43 --alphas 0.5 1 5 --steps 100
 
@@ -55,7 +55,7 @@ def main():
     parser.add_argument('--steps', type=int, default=500)
     parser.add_argument('--lr', type=float, default=0.03)
     parser.add_argument('--record-every', type=int, default=25)
-    parser.add_argument('--outdir', type=Path, default=Path('results'))
+    parser.add_argument('--outdir', type=Path, default=Path(__file__).resolve().parent / 'results')
     args = parser.parse_args()
 
     if any(alpha <= 0 for alpha in args.alphas):
